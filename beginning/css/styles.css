@@ -181,7 +181,6 @@ header {
     background-color: white;
 }
 header p {
-    /* border: 5px dashed yellow; */
     text-align: center;
     background-color: darkblue;
     color: white;
@@ -196,7 +195,6 @@ header p {
     /* max-width: 900px; */
 }
 .overview {
-    /* border: 5px solid blue; */
     display: grid;
     grid-template-areas: 
         "overview1 video"
@@ -230,21 +228,18 @@ h2 {
     margin: 10px 100px;
 } */
 .about-container {
-    /* border: 5px dashed black; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: #D9D9D9;
     padding: 20px 60px;
 }
 section.container h2 {
-    /* border: 5px solid chartreuse; */
     text-align: center;
     margin: 0 auto;
     background-color: #D9D9D9;
     padding-top: 50px;
 }
 .container .overview h2 {
-    /* border: 5px solid purple; */
     background-color: white;
     margin-left: 100px;
 }
@@ -268,7 +263,6 @@ section:last-of-type, section:last-of-type h2 {
     background-color: white;
 }
 footer {
-    /* border: 5px solid red; */
     margin: 0 150px;
 }
 footer p {
@@ -439,8 +433,10 @@ footer img {
 /**Mobile Styles**/
 @media only screen and (max-width: 767px) {
     header .container {
+        display: flex;
         flex-wrap: wrap;
         position: relative;
+        padding: 0;
     }
     header img {
         width: 200px;
@@ -539,6 +535,40 @@ footer img {
     }
     .about-block {
         flex-direction: column;
+        height: 155px;
+    }
+    /* section {
+        display: flex;
+    } */
+    .overview {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    iframe {
+        width: 100%;
+    }
+    .container .overview h2, .container .overview p {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-block {
+        gap: 0;
+        height: 135px;
+    }
+    .about-block:last-of-type {
+        grid-column: span 2;
+        height: 115px;
+    }
+    section:last-of-type p {
+        text-align: center;
+    }
+    footer {
+        margin: 0;
     }
     .community {
         grid-template-columns: repeat(1, 1fr);
